@@ -1,14 +1,5 @@
 # repro_cocoapods_issue
 
-A new flutter plugin project.
+Reproduces an issue with CocoaPods whereby external C code cannot be included in the search path during compilation.
 
-## Getting Started
-
-This project is a starting point for a Flutter
-[plug-in package](https://flutter.dev/developing-packages/),
-a specialized package that includes platform-specific implementation code for
-Android and/or iOS.
-
-For help getting started with Flutter, view our 
-[online documentation](https://flutter.dev/docs), which offers tutorials, 
-samples, guidance on mobile development, and a full API reference.
+Note the [podspec](ios/repro_cocoapods_issue.podspec) includes a `user_target_xcconfig` that _should_ result in the `ios/external` folder being included as a search path. However, attempting to `#include` the file within results in failed compilation.
