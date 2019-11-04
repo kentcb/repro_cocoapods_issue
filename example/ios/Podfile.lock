@@ -1,0 +1,22 @@
+PODS:
+  - Flutter (1.0.0)
+  - repro_cocoapods_issue (0.0.1):
+    - Flutter
+
+DEPENDENCIES:
+  - Flutter (from `.symlinks/flutter/ios`)
+  - repro_cocoapods_issue (from `.symlinks/plugins/repro_cocoapods_issue/ios`)
+
+EXTERNAL SOURCES:
+  Flutter:
+    :path: ".symlinks/flutter/ios"
+  repro_cocoapods_issue:
+    :path: ".symlinks/plugins/repro_cocoapods_issue/ios"
+
+SPEC CHECKSUMS:
+  Flutter: 0e3d915762c693b495b44d77113d4970485de6ec
+  repro_cocoapods_issue: 6fe11965ffdcb64ddcc37b74833d6df21415c8b9
+
+PODFILE CHECKSUM: 64b2109b760ac9073c864e2a8278e6464efaa219
+
+COCOAPODS: 1.7.5
