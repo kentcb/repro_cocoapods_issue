@@ -1,3 +1,3 @@
-char* get_string_from_same_dir() {
+char* get_string() {
     return "same dir";
 }

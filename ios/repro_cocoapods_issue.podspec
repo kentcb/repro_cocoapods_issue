@@ -18,6 +18,12 @@ A new flutter plugin project.
 
   s.ios.deployment_target = '8.0'
 
+  s.xcconfig = { 'HEADER_SEARCH_PATHS' => '"${PROJECT_DIR}/external/"'}
+  s.xcconfig = { 'USER_HEADER_SEARCH_PATHS' => '"${PROJECT_DIR}/external/"'}
+  s.user_target_xcconfig = { 'HEADER_SEARCH_PATHS' => '"${PROJECT_DIR}/external/"'}
   s.user_target_xcconfig = { 'USER_HEADER_SEARCH_PATHS' => '"${PROJECT_DIR}/external/"'}
+  s.pod_target_xcconfig = { 'HEADER_SEARCH_PATHS' => '"${PROJECT_DIR}/external/"'}
+  s.pod_target_xcconfig = { 'USER_HEADER_SEARCH_PATHS' => '"${PROJECT_DIR}/external/"'}
+  s.compiler_flags = '-Iexternal/'
 end
 

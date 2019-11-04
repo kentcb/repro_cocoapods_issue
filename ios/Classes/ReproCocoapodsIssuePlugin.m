@@ -1,6 +1,16 @@
 #import "ReproCocoapodsIssuePlugin.h"
+
+// This works.
+// #include "same_dir.c"
+
+// This also works.
+// #include "../external/external_dir.c"
+
+// This fails.
 #include <external_dir.c>
-#include "same_dir.c"
+
+// This also fails.
+// #include "external_dir.c"
 
 @implementation ReproCocoapodsIssuePlugin
 + (void)registerWithRegistrar:(NSObject<FlutterPluginRegistrar>*)registrar {
@@ -13,8 +23,7 @@
 
 - (void)handleMethodCall:(FlutterMethodCall*)call result:(FlutterResult)result {
   if ([@"getPlatformVersion" isEqualToString:call.method]) {
-//    result([NSString stringWithUTF8String:get_string_from_same_dir()]);
-    result([NSString stringWithUTF8String:get_string_from_external_dir()]);
+    result([NSString stringWithUTF8String:get_string()]);
   } else {
     result(FlutterMethodNotImplemented);
   }

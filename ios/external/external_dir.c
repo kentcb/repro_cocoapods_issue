@@ -1,3 +1,3 @@
-char* get_string_from_external_dir() {
+char* get_string() {
     return "external dir";
 }
